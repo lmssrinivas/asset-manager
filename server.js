@@ -22,4 +22,4 @@ app
 var port = 3311;
 
 app.listen(port);
-console.log(`code-challenge server listening on ${port}... good luck!`);
+console.log(`code-challenge server listening on ${port}... Server Listening on port ${port}`);
