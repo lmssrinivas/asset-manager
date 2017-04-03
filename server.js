@@ -19,7 +19,7 @@ app
     .use(router.allowedMethods())
     .use(notFound);
 
-var port = 3311;
+var port = process.env.PORT || 3000;
 
 app.listen(port);
 console.log(`code-challenge server listening on ${port}... Server Listening on port ${port}`);
