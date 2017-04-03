@@ -1,4 +1,6 @@
 #
+
+demo app : **https://asset-manager24.herokuapp.com**
 **Primary Objectives**
 
  * Create a simple web application that displays assets records using AngularJS 1.x
