@@ -1,0 +1,21 @@
+{
+  "name": "code-challenge",
+  "version": "1.0.0",
+  "description": "a challenge for coders",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyrone Warren",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "ssh+git@gitlab.corp.nextvr.com:9022/web/code-challenge.git"
+  },
+  "dependencies": {
+    "koa": "^1.2.5",
+    "koa-body": "^1.6.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0"
+  }
+}

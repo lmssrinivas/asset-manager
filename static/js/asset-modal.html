@@ -1,0 +1,12 @@
+<div ng-if="modal.asset">
+
+    <div ng-if="modal.asset.type == 'image'">
+        <img src="{{modal.asset.url |trustUrl}}" alt="modal.asset.name">
+    </div>
+
+    <div ng-if="modal.asset.type == 'video'">
+        <!--<video src="{{modal.asset.url |trustUrl}}"></video>-->
+
+        <iframe src="{{modal.asset.url |trustUrl}}" frameborder="0"></iframe>
+    </div>
+</div>

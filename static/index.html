@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="assets">
+<head>
+
+    <title>Asset List</title>
+
+    <!-- feel free to remove the tags below and add your own -->
+    <link rel="stylesheet" href="./bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <script src="/js/nothing.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="./bower/jquery/dist/jquery.min.js"></script>
+    <script src="./bower/bootstrap/dist/js/bootstrap.js"></script>
+    <!--<script src="./bower/angular/angular.min.js"></script>-->
+
+    <!--&lt;!&ndash;Vendor &ndash;&gt;-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>-->
+
+    <!--&lt;!&ndash; Angular Material Library &ndash;&gt;-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!--Vendor  End-->
+
+    <script src="./js/app.js"></script>
+    <script src="./js/assetServices.js"></script>
+
+</head>
+
+<body ng-controller="AssetsController">
+
+    <h1>Asset List</h1>
+    <hr>
+    <!-- your application could load here if you want -->
+    <!--<div>...application interface here</div>-->
+
+    <div >
+
+        <div>
+
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" ng-model="newAsset.name" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <input type="text" class="form-control" id="type" ng-model="newAsset.type" placeholder="type">
+                    </div>
+                    <div class="form-group">
+                        <label for="format">Format</label>
+                        <input type="text" class="form-control" id="format" ng-model="newAsset.format" placeholder="format">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Url">Url</label>
+                        <input type="text" class="form-control" id="Url" ng-model="newAsset.url" placeholder="url">
+                    </div>
+
+                    <button type="submit" class="btn btn-default" ng-click="createAsset()">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="asset in assets">
+                <a href="javascript:void(0)" ng-click="renderAsset(asset)">
+                    <h2>{{asset.name}}</h2>
+                </a>
+                <span class="label label-default" ng-click="deleteAsset(asset)">Delete </span>
+                <div>{{asset.url}}</div>
+                <div>{{asset.description}}</div>
+                <span class="label label-default">{{asset.type}}</span>
+
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
